@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ja">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ 
+    <title>スピログラフ!</title>
+</head>
+ 
+<body>
+    <br>
+    <h1>スピログラフを半手動でかくやつ</h1>
+    <br>
+ 
+    <div class="border col-7 align-items-center">
+        <br>
+        <h2>数値を入れて"図形を描く(連打)"を連打</h2>
+        <br>
+        <div class="row">
+            <div class="col-md">
+                <form>
+                    <p>定円半径 c、動円半径 m、描画点半径 d、m,d 共に負なら外トロコイド</p>
+                    <div class="form-group"id="img-url">
+                        <br>
+                        <label class="form-label">C：</label>
+                        <input type="text" class="form-control" id="m" placeholder="40">
+                    </div>
+                    <div class="form-group"id="img-url">
+                        <br>
+                        <label class="form-label">M：</label>
+                        <input type="text" class="form-control" id="c" placeholder="23">
+                    </div>
+                    <div class="form-group"id="img-url">
+                        <br>
+                        <label class="form-label">D：</label>
+                        <input type="text" class="form-control" id="d" placeholder="11">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="row center-block text-center">
+            <div class="col-1">
+            </div>
+            <div class="col-5">
+                <a href=""><button type="button" class="btn btn-outline-secondary btn-block">クリア</button></a>
+            </div>
+            <div class="col-5">
+                <button type="button" class="btn btn-outline-primary btn-block" value="button" id="form-ckick">図形を描く(連打)</button>
+            </div>
+        </div>
+        <div class="col-1">
+        </div>
+        <hr>
+        <br>
+        <h2>出力</h2>
+        <div class="row">
+            <div class="col-md">
+                <div style="border:groove; width: 310px; height: 310px;" width="600" height="600" id="canvas"></div>
+            </div>
+        </div>
+        </div>
+    </body>
+<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+<script src="./js/zukei.min.js"></script>
